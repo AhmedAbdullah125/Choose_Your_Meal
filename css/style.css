@@ -1,0 +1,105 @@
+* {
+    transition: left .5s, top .5s;
+}
+
+.side-nav-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    bottom: 0;
+    z-index: 10;
+}
+
+.logo {
+    max-width: 50px;
+}
+
+.meal {
+    position: relative;
+    overflow: hidden;
+}
+
+.meal-text {
+    position: absolute !important;
+    top: calc(100% + 16px) !important;
+    right: 16px;
+    bottom: 16px !important;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .7);
+    left: 16px;
+    padding: 30px;
+    color: black;
+    font-size: 28px;
+    border-radius: 15px;
+
+}
+
+.nav-tab {
+    background-color: black;
+}
+
+.meal:hover .meal-text {
+    top: 16px !important;
+}
+
+.desc {
+    font-size: 14px;
+}
+
+.big {
+    font-size: 50px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.slid {
+    display: none;
+}
+
+/*preloader*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader img {
+    max-width: 100px;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    transition: all 0.3s ease-in-out;
+    animation-name: loader;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
